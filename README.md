@@ -1,46 +1,24 @@
-# Getting Started with Create React App
+노마드코더 [노마드코터 리액트JS마스터클래스](https://nomadcoders.co/react-masterclass) 강의를
+2주동안 과제와 함께 정.복.🚀하기 위한 Challenges 🧑‍🚀☄️
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<br/>
+<br/>
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+<hr/>
+<h2>🗓 ReactJS 챌린지 (2주) 진도표</h2>
+<h3>1 주차</h3>
+- 월 | Assignment #01  &nbsp;&nbsp;&nbsp;✅done<br/>
+✍️ #2.0 ~ #2.7    ✔️ 퀴즈<br/>
+- 화 | Assignment #02  &nbsp;&nbsp;&nbsp;✅done<br/>
+✍️ #3.0 ~ #3.7    ✔️ 퀴즈<br/>
+- 수, 목, 금 | Assignment #03 <br/>
+✍️ #5.0 ~ #5.16   ✔️ 코드 챌린지 (3일)<br/>
+- 토, 일           🌴 휴일<br/>
+<h3>2 주차</h3>
+- 월, 화, 수 | Assignment #04<br/>
+✍️ #6.0 ~ #6.19    ✔️ 코드 챌린지 (3일)<br/>
+- 목, 금 | Assignment #05<br/>
+✍️ #8.0 ~ #8.16    ✔️ 코드 챌린지 (2일)<br/>
+- 토, 일 | Assignment #06<br/>
+✍️ #9.0 ~ #9.15    ✔️ 졸업작품 (2일) <br/>
+🚩 finish.
