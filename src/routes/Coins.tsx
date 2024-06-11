@@ -1,0 +1,97 @@
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
+import { getCoins } from "./service";
+import { CoinInterface } from "./CoinInterface";
+
+const Container = styled.div`
+    padding: 0px 20px;
+    max-width: 480px;
+    margin: 0 auto;
+`;
+
+const Header = styled.div`
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+`;
+
+const CoinList = styled.ul`
+`;
+
+const Coin = styled.li`
+    background-color: white;
+    color : ${props => props.theme.bgColor};
+    margin-bottom: 10px;
+    border-radius: 15px;
+    a{
+        display : flex;
+        align-items: center;
+        padding: 20px;
+        transition : color 0.2s ease-in;
+    }
+    &:hover {
+        a{
+            color: ${props => props.theme.accentColor}
+        }
+    }
+`;
+
+const Img = styled.img`
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+`;
+
+const Title = styled.h1`
+  color: ${props => props.theme.accentColor};
+  font-size: 48px; 
+`;
+
+const Loader = styled.span`
+    text-align: center;
+`;
+
+function Coins() {
+
+    const [coins, setCoins] = useState<CoinInterface[]>([]);
+    const [loading, setLoaing] = useState(true);
+
+    useEffect(()=> {
+        (async () => {
+            const _coinData = await getCoins();
+            setCoins(_coinData);
+            setLoaing(false);
+        })();
+    }, []);
+
+
+    return (
+        <Container>
+            <Header>
+                <Title>Coin Tracker</Title>
+            </Header>
+            {loading? 
+            <Loader>Loading...</Loader>   
+            : 
+            <CoinList>
+                {coins.map((coin) => (
+                    <Coin key={coin.id}>
+                        <Link to={{
+                            pathname : `/${coin.id}`,
+                            state : {name : coin.name }
+                        }}>
+                            <Img src={`https://cryptoicon-api.pages.dev/api/icon/${coin.symbol.toLowerCase()}`} />
+                            {coin.name} &rarr;
+                        </Link>
+                    </Coin>
+                ))}
+            </CoinList>
+            }
+        </Container>
+    )
+}
+
+export default Coins;
