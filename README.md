@@ -2,6 +2,30 @@
 2주동안 과제와 함께 정.복.🚀하기 위한 Challenges 🧑‍🚀☄️
 
 <br/>
+<h2>👩‍💻 학습목표</h2>
+<p>
+  <ul>
+    <li>
+        학습언어 및 라이브러리
+        <div style="display: flex; justify-content:center; align-items:center;">
+          <img src="https://nervjs.github.io/taro-docs/assets/images/rn-ecec68ba194e4b5e9fc3e853cc00c569.png"  style="width: 50px; height: 50px;">
+          <img src="https://nomadcoders.co/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftypescript.791deeef.png&w=1920&q=75" style="width: 50px; height: 50px;">
+          <img src="https://nomadcoders.co/logos/react-query.svg" style="width: 50px; height: 50px;">
+          <img src="https://nomadcoders.co/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmotion.66282fc0.png&w=640&q=75" style="width: 50px; height: 50px;">
+          <img src="https://nomadcoders.co/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgatsby.535afb3f.png&w=1920&q=75" style="width: 50px; height: 50px;">
+        </div>
+    </li>
+    <li>
+        챌린지 과제
+        <ul>
+          <li>암호화폐 시세트래커</li>
+          <li>Trello 클론코딩</li>
+          <li>Netflix 클론코딩</li>
+        </ul>
+    </li>
+  </ul>
+</p>
+<br/>
 <br/>
 
 <hr/>
