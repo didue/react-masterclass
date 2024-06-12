@@ -1,5 +1,6 @@
 import {createGlobalStyle} from 'styled-components';
 import Router from './Router';
+import { ReactQueryDevtools } from 'react-query/devtools';
 
 const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
@@ -32,8 +33,9 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
   body {
-    line-height: 1;
+    line-height: 1.2;
     font-family: "Noto Sans KR", sans-serif;
+    font-weight: 300;
     background-color: ${props => props.theme.bgColor};
     color: ${props => props.theme.textColor};
   }
@@ -64,6 +66,7 @@ function App() {
     <>
       <GlobalStyle/>
       <Router/>
+      <ReactQueryDevtools initialIsOpen={true} />
     </>
   );
 }

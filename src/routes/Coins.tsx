@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { getCoins } from "./service";
 import { CoinInterface } from "./CoinInterface";
+import { useQuery } from "react-query";
+import { fetchCoins } from "./api";
 
 const Container = styled.div`
     padding: 0px 20px;
@@ -15,7 +15,7 @@ const Header = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px;
+    margin: 40px 20px;
 `;
 
 const CoinList = styled.ul`
@@ -56,16 +56,21 @@ const Loader = styled.span`
 
 function Coins() {
 
-    const [coins, setCoins] = useState<CoinInterface[]>([]);
-    const [loading, setLoaing] = useState(true);
+    //react hooks version
+    // const [coins, setCoins] = useState<CoinInterface[]>([]);
+    // const [loading, setLoaing] = useState(true);
 
-    useEffect(()=> {
-        (async () => {
-            const _coinData = await getCoins();
-            setCoins(_coinData);
-            setLoaing(false);
-        })();
-    }, []);
+    // useEffect(()=> {
+    //     (async () => {
+    //         const _coinData = await getCoins();
+    //         setCoins(_coinData);
+    //         setLoaing(false);
+    //     })();
+    // }, []);
+
+
+    //react-query version
+    const {isLoading, data} = useQuery<CoinInterface[]>("allCoins", fetchCoins);
 
 
     return (
@@ -73,11 +78,11 @@ function Coins() {
             <Header>
                 <Title>Coin Tracker</Title>
             </Header>
-            {loading? 
+            {isLoading? 
             <Loader>Loading...</Loader>   
             : 
             <CoinList>
-                {coins.map((coin) => (
+                {data?.slice(0, 100).map((coin) => (
                     <Coin key={coin.id}>
                         <Link to={{
                             pathname : `/${coin.id}`,
