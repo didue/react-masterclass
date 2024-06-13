@@ -1,11 +1,12 @@
 import {  useState } from "react";
+import { Helmet } from "react-helmet";
 import { Switch, Route,useLocation, useParams, Link, useRouteMatch } from "react-router-dom";
 import styled from "styled-components";
 import { ICoinInfoData, ICoinPriceData } from "./CoinInterface";
 import Price from "./Price";
 import Chart from "./Chart";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faHouse} from '@fortawesome/free-solid-svg-icons';
+import {faArrowLeft} from '@fortawesome/free-solid-svg-icons';
 import { numberWithCommas } from "./FormatUtils";
 import { useQuery } from "react-query";
 import { fetchCoinInfos, fetchCoinTickers } from "./api";
@@ -108,19 +109,25 @@ function Coin() {
     // }, [coinId]);
 
     //React-Query Ver.
-    const {isLoading: infoLoading, data: infoData} = useQuery<ICoinInfoData>(["info", coinId], () => fetchCoinInfos(coinId));
-    const {isLoading: tickerLoading, data: priceData} = useQuery<ICoinPriceData>(["tickers", coinId], () => fetchCoinTickers(coinId));
+    const {isLoading: infoLoading, data: infoData} = useQuery<ICoinInfoData>(["info", coinId], () => fetchCoinInfos(coinId), {refetchInterval : 30000});
+    const {isLoading: tickerLoading, data: priceData} = useQuery<ICoinPriceData>(["tickers", coinId], () => fetchCoinTickers(coinId), {refetchInterval : 30000});
     const loading = infoLoading || tickerLoading;
 
     return (
         <Container>
+          <Helmet>
+            <title>
+            {`${state?.name? state.name : loading? "Loading..." : infoData?.name } | 
+              $${numberWithCommas(Number(priceData?.quotes.USD.price.toFixed(3)))}`}
+            </title>
+          </Helmet>
         <Header>
             <Icons>
                 <Link to="/">
-                    <FontAwesomeIcon icon={faHouse} size="lg" />
+                    <FontAwesomeIcon icon={faArrowLeft} size="lg" />
                 </Link>
             </Icons>
-            <Title>{state?.name? state.name : isLoading? "Loading..." : infoData?.name }</Title>
+            <Title>{state?.name? state.name : loading? "Loading..." : infoData?.name }</Title>
         </Header>
         {loading? 
         <Loader>Loading...</Loader>   
@@ -133,11 +140,11 @@ function Coin() {
             </OverviewItem>
             <OverviewItem>
               <span>Symbol:</span>
-              <span>${infoData?.symbol}</span>
+              <span>{infoData?.symbol}</span>
             </OverviewItem>
             <OverviewItem>
-              <span>Open Source:</span>
-              <span>{infoData?.open_source ? "Yes" : "No"}</span>
+              <span>Price:</span>
+              <span>${numberWithCommas(Number(priceData?.quotes.USD.price.toFixed(3)))}</span>
             </OverviewItem>
           </Overview>
           <Description>{infoData?.description}</Description>
@@ -165,10 +172,10 @@ function Coin() {
 
           <Switch>
             <Route path={`/:coinId/price`}>
-              <Price />
+              <Price coinId={coinId} />
             </Route>
             <Route path={`/:coinId/chart`}>
-              <Chart />
+              <Chart coinId={coinId} />
             </Route>
           </Switch>
         </> 

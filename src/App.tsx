@@ -1,6 +1,9 @@
-import {createGlobalStyle} from 'styled-components';
+import styled, {createGlobalStyle} from 'styled-components';
 import Router from './Router';
 import { ReactQueryDevtools } from 'react-query/devtools';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faMoon} from '@fortawesome/free-solid-svg-icons';
+
 
 const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
@@ -59,6 +62,22 @@ const GlobalStyle = createGlobalStyle`
     color: inherit;
   }
 `
+const ThemeButton = styled.div`
+  width: 44px;
+  height: 44px;
+  background-color: ${props => props.theme.textColor};
+  color: ${props => props.theme.bgColor};
+  /* border : 1px solid ${props => props.theme.textColor}; */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom : 1rem;
+  right: 1rem;
+  z-index : 5;
+  cursor: pointer;
+`;
 
 
 function App() {
@@ -67,6 +86,9 @@ function App() {
       <GlobalStyle/>
       <Router/>
       <ReactQueryDevtools initialIsOpen={true} />
+      <ThemeButton>
+        <FontAwesomeIcon icon={faMoon} size="lg" />
+      </ThemeButton>
     </>
   );
 }
