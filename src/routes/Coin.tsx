@@ -150,7 +150,7 @@ function Coin() {
           <Description>{infoData?.description}</Description>
           <Overview>
             <OverviewItem>
-              <span>Total Suply:</span>
+              <span>Total Supply:</span>
               <span>{numberWithCommas(priceData?.total_supply)}</span>
             </OverviewItem>
             <OverviewItem>

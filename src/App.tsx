@@ -3,6 +3,9 @@ import Router from './Router';
 import { ReactQueryDevtools } from 'react-query/devtools';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faMoon} from '@fortawesome/free-solid-svg-icons';
+import { ThemeProvider } from 'styled-components';
+import { darktheme, lightTheme } from './theme';
+import { useState } from 'react';
 
 
 const GlobalStyle = createGlobalStyle`
@@ -81,14 +84,20 @@ const ThemeButton = styled.div`
 
 
 function App() {
+
+  const [isDark, setIsDark] = useState(true);
+  const toggleTheme = () => setIsDark((current) => !current);
+
   return (
     <>
-      <GlobalStyle/>
-      <Router/>
-      <ReactQueryDevtools initialIsOpen={true} />
-      <ThemeButton>
-        <FontAwesomeIcon icon={faMoon} size="lg" />
-      </ThemeButton>
+      <ThemeProvider theme={isDark? darktheme : lightTheme}>
+        <GlobalStyle/>
+        <Router/>
+        <ReactQueryDevtools initialIsOpen={true} />
+        <ThemeButton onClick={toggleTheme}>
+          <FontAwesomeIcon icon={faMoon} size="lg" />
+        </ThemeButton>
+      </ThemeProvider>
     </>
   );
 }
