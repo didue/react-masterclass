@@ -1,8 +1,9 @@
 {
-  "name": "my-app",
+  "name": "my-react-masterclass",
   "version": "0.1.0",
-  "proxy" : "https://github.com/didue",
-  "homepage": "https://github.com/didue/react-masterclass",
+  "proxy": "https://github.com/didue",
+  "private" : true,
+  "homepage": "https://didue.github.io/react-masterclass/",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
     "@fortawesome/free-brands-svg-icons": "^6.5.2",
@@ -35,7 +36,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy" : "gh-pages -d build"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -59,6 +61,7 @@
     "@tanstack/react-query-devtools": "^5.44.0",
     "@types/react-helmet": "^6.1.11",
     "@types/styled-components": "^5.1.34",
-    "axios": "^1.7.2"
+    "axios": "^1.7.2",
+    "gh-pages": "^6.1.1"
   }
 }
