@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "https://didue.github.io/react-masterclass/static/js/main.2e56195b.js",
-    "index.html": "https://didue.github.io/react-masterclass/index.html",
-    "main.2e56195b.js.map": "https://didue.github.io/react-masterclass/static/js/main.2e56195b.js.map"
+    "main.js": "http://localhost:3000/static/js/main.f0e828b5.js",
+    "index.html": "http://localhost:3000/index.html",
+    "main.f0e828b5.js.map": "http://localhost:3000/static/js/main.f0e828b5.js.map"
   },
   "entrypoints": [
-    "static/js/main.2e56195b.js"
+    "static/js/main.f0e828b5.js"
   ]
 }
