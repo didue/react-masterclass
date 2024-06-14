@@ -34,8 +34,8 @@
 - 월 | Assignment #01  &nbsp;&nbsp;&nbsp;✅done<br/>
 ✍️ #2.0 ~ #2.7    ✔️ 퀴즈<br/>
 - 화 | Assignment #02  &nbsp;&nbsp;&nbsp;✅done<br/>
-✍️ #3.0 ~ #3.7    ✔️ 퀴즈  &nbsp;&nbsp;&nbsp;✅done<br/>
-- 수, 목, 금 | Assignment #03 <br/>
+✍️ #3.0 ~ #3.7    ✔️ 퀴즈
+- 수, 목, 금 | Assignment #03 <br/>  &nbsp;&nbsp;&nbsp;✅done<br/>
 ✍️ #5.0 ~ #5.16   ✔️ 코드 챌린지 (3일)<br/>
 - 토, 일           🌴 휴일<br/>
 <h3>2 주차</h3>
