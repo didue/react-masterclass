@@ -1,7 +1,7 @@
 {
   "name": "my-app",
   "version": "0.1.0",
-  "private": true,
+  "proxy" : "https://github.com/didue",
   "homepage": "https://github.com/didue/react-masterclass",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
@@ -33,7 +33,6 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "postbuild" : "cp build/index.html build/404.html",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "deploy" : "gh-pages -d build"
