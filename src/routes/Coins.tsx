@@ -42,8 +42,8 @@ const Coin = styled.li`
 `;
 
 const Img = styled.img`
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     margin-right: 10px;
 `;
 

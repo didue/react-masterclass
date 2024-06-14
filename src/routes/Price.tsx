@@ -3,6 +3,8 @@ import ReactApexChart from "react-apexcharts";
 import { ICoinOHLCData } from "./CoinInterface";
 import { fetchOHLCValues } from "./api";
 import { numberWithCommas } from "./FormatUtils";
+import { useRecoilValue } from "recoil";
+import { isDarkAtom } from "./atoms";
 
 interface PriceProps {
     coinId: string;
@@ -11,6 +13,7 @@ interface PriceProps {
 
 function Price({coinId} : PriceProps) {
 
+    const isDark = useRecoilValue(isDarkAtom);
     const {isLoading, data} = useQuery<ICoinOHLCData[]>(
         ["ohlcv", coinId],
         () => fetchOHLCValues(coinId),
@@ -38,7 +41,7 @@ function Price({coinId} : PriceProps) {
                     }
                 ]}
                 options={{
-                    theme : { mode : "dark" },
+                    theme : { mode : isDark? 'dark': 'light' },
                     chart : {
                         background : "transparent",
                         toolbar : { show : false },
