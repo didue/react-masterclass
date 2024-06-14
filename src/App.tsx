@@ -1,8 +1,6 @@
 import styled, {createGlobalStyle} from 'styled-components';
 import Router from './Router';
 import { ReactQueryDevtools } from 'react-query/devtools';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faMoon} from '@fortawesome/free-solid-svg-icons';
 import { ThemeProvider } from 'styled-components';
 import { darktheme, lightTheme } from './theme';
 import { useState } from 'react';
@@ -95,7 +93,7 @@ function App() {
         <Router/>
         <ReactQueryDevtools initialIsOpen={true} />
         <ThemeButton onClick={toggleTheme}>
-          <FontAwesomeIcon icon={faMoon} size="lg" />
+          <i className="fa-solid fa-moon fa-lg"></i>
         </ThemeButton>
       </ThemeProvider>
     </>

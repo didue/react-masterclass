@@ -5,8 +5,6 @@ import styled from "styled-components";
 import { ICoinInfoData, ICoinPriceData } from "./CoinInterface";
 import Price from "./Price";
 import Chart from "./Chart";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faArrowLeft} from '@fortawesome/free-solid-svg-icons';
 import { numberWithCommas } from "./FormatUtils";
 import { useQuery } from "react-query";
 import { fetchCoinInfos, fetchCoinTickers } from "./api";
@@ -124,7 +122,7 @@ function Coin() {
         <Header>
             <Icons>
                 <Link to="/">
-                    <FontAwesomeIcon icon={faArrowLeft} size="lg" />
+                    <i className="fa-solid fa-arrow-left fa-lg"></i>
                 </Link>
             </Icons>
             <Title>{state?.name? state.name : loading? "Loading..." : infoData?.name }</Title>
