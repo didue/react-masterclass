@@ -23,9 +23,10 @@ const CoinList = styled.ul`
 `;
 
 const Coin = styled.li`
-    background-color: ${props => props.theme.cardColor};
-    color : #2f3640;
+    background-color: ${props => props.theme.bgColor};
+    color : ${props => props.theme.textColor};
     margin-bottom: 10px;
+    border: 1px solid ${props => props.theme.textColor};
     border-radius: 15px;
     a{
         display : flex;

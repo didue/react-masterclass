@@ -93,7 +93,7 @@ function App() {
         <Router/>
         <ReactQueryDevtools initialIsOpen={true} />
         <ThemeButton onClick={toggleTheme}>
-          <i className="fa-solid fa-moon fa-lg"></i>
+          <i className={`fa-solid fa-lg ${isDark? 'fa-sun' : 'fa-moon'}`} style={{color : `${isDark? '#ff9f43' : '#ffd43b'}`}}></i>
         </ThemeButton>
       </ThemeProvider>
     </>
