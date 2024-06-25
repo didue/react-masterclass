@@ -19,7 +19,7 @@
   <li>💅 Styled-Components</li>
   <li>🎣 ReactJS Hooks</li>
   <li>📈 Data fetching And React-query</li>
-  <li>⚙️ Recoli State Mannagement</li>
+  <li>⚙️ Recoil State Mannagement</li>
   <li>📜 React Router V6</li>
   <li>👾 Gatsby</li>
   <li>🚀 Code Challenges - Clone Coding </li>
@@ -40,7 +40,7 @@
 - 토, 일           🌴 휴일<br/>
 <h3>2 주차</h3>
 ✍️ (강의 #6.0 ~ #6.19) 월, 화, 수 | Assignment #04<br/>
-&nbsp;&nbsp&nbsp;&nbsp;✔️ 코드 챌린지 (3일) : Trello 클론 코딩 <br/>
+&nbsp;&nbsp&nbsp;&nbsp;✔️ 코드 챌린지 (3일) : Trello 클론 코딩 &nbsp;&nbsp;✅done<br/>
 ✍️ (강의 #8.0 ~ #8.16) 목, 금 | Assignment #05<br/>
 &nbsp;&nbsp&nbsp;&nbsp;✔️ 코드 챌린지 (2일) : Netflix 클론 코딩<br/>
 ✍️ (강의 #9.0 ~ #9.15) 토, 일 | Assignment #06<br/>
